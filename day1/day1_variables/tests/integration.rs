@@ -8,7 +8,7 @@ fn test_integration_all_functions() {
     println!("1. describe_mutability() 통합 테스트:");
     println!("{}", "=".repeat(50));
     let mutability_result = describe_mutability();
-    println!("반환 타입: String");
+    println!("반환 타입: {}", std::any::type_name_of_val(&mutability_result));
     println!("전체 내용:");
     println!("{}", mutability_result);
     println!();
@@ -17,7 +17,7 @@ fn test_integration_all_functions() {
     println!("2. shadow_example() 통합 테스트:");
     println!("{}", "=".repeat(50));
     let shadow_result = shadow_example();
-    println!("반환 타입: Vec<String>");
+    println!("반환 타입: {}", std::any::type_name_of_val(&shadow_result));
     println!("섀도잉 과정:");
     
     // shadow_result 전체 출력
