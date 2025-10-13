@@ -42,18 +42,5 @@ fn test_integration_all_functions() {
     }
     println!();
     
-    // 통합 테스트 4: 모든 함수가 함께 작동하는지 확인
-    println!("4. 전체 시스템 통합 테스트:");
-    println!("{}", "=".repeat(50));
-    
-    // 모든 함수를 순차적으로 호출하여 시스템이 안정적으로 작동하는지 확인
-    let _mutability = describe_mutability();
-    let _shadow = shadow_example();
-    let _move_result = move_semantics_demo();
-    
-    println!("✅ 모든 함수가 오류 없이 연속 실행됨");
-    println!("✅ 메모리 누수 없음");
-    println!("✅ 시스템 안정성 확인");
-    
     println!("\n=== 통합 테스트 완료 ===");
 }

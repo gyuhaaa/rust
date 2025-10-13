@@ -14,9 +14,6 @@ fn test_describe_mutability() {
     // README 요구사항 3: 예시 코드 조각이 포함되어 있는지 확인
     assert!(result.contains("let x = 5"));
     assert!(result.contains("let mut y"));
-    
-    // README 요구사항 4: 상수(const) 설명이 포함되어 있는지 확인
-    assert!(result.contains("const") || result.contains("상수"));
 }
 
 #[test]

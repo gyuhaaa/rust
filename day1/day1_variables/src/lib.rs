@@ -15,7 +15,6 @@ pub fn describe_mutability() -> String {
         불변 변수는 값을 변경할 수 없으며, 가변 변수는 값을 변경할 수 있습니다.
     "#.to_string();
 
-    // println!("{}", result);
     return result;
 }
 
@@ -56,7 +55,7 @@ pub fn shadow_example() -> Vec<String> {
     // let CONSTANT_VALUE = CONSTANT_VALUE.len();
     // result.push(format!("{}", CONSTANT_VALUE));
 
-    result.push(format!("변수(variable)는 섀도잉 가능하지만, 상수(constant)는 섀도잉 불가능합니다."));
+    result.push(format!("\n섀도잉은 같은 이름의 변수를 새로 선언하여 이전에 선언된 변수를 \"가리는\" 행위입니다.\n변수(variable)는 섀도잉 가능하지만, 상수(constant)는 섀도잉 불가능합니다."));
     return result;
 }
 
@@ -67,8 +66,7 @@ pub fn move_semantics_demo() -> Result<(), String> {
     let after = before; // 소유권이 before에서 after로 이동
     println!("{}", after);
 
-    Err(format!("소유권(ownership)이 before에서 after로 이동한 후 before 변수를 사용할 수 없습니다. \
-    이는 러스트의 메모리 안전성을 위해 설계된 소유권 이동 규칙에 따른 것입니다."))
+    Err(format!("소유권(ownership)이 before에서 after로 이동한 후 before 변수를 사용할 수 없습니다.\n이는 러스트의 메모리 안전성을 위해 설계된 소유권 이동 규칙에 따른 것입니다."))
 }
 
 pub fn main() {
